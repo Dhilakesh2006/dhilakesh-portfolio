@@ -1,0 +1,6 @@
+/* App-level overrides. Section layout/spacing is handled per-component
+   with Tailwind utility classes; this file only resets root constraints
+   left over from the Vite starter template. */
+#root {
+  width: 100%;
+}
