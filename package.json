@@ -1,15 +1,16 @@
 {
   "name": "project",
-  "homepage": "https://dhilakesh2006.github.io/Dhilakesh-Portofolia",
+  "homepage": "https://Dhilakesh2006.github.io/dhilakesh-portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:pages": "vite build --base=/dhilakesh-portfolio/",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
+    "predeploy": "npm run build:pages",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
