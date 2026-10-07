@@ -4,6 +4,57 @@ import { SectionHeading } from "../SectionHeading";
 import { projects } from "../../data/portfolio";
 import { ExternalLinkIcon, GitHubIcon } from "../icons/Icons";
 
+import foodDeliveryImg from "../../assets/projects/food-delivery.jpg";
+import jarvisChatbotImg from "../../assets/projects/jarvis-chatbot.jpg";
+import productApiImg from "../../assets/projects/product-api.jpg";
+
+const IMAGES = {
+  "food-delivery": foodDeliveryImg,
+  "jarvis-chatbot": jarvisChatbotImg,
+  "product-api": productApiImg,
+};
+
+const ICON_PATHS = {
+  food: "M4 11h16M4 11a8 8 0 0 1 16 0M4 11v2a8 8 0 0 0 16 0v-2M9 5V3M12 5V3M15 5V3",
+  chat: "M4 5h16v10H8l-4 4V5Z",
+  api: "M4 6h16v4H4zM4 14h16v4H4zM8 8h.01M8 16h.01",
+  cart: "M3 4h2l2.4 11.4a2 2 0 0 0 2 1.6h7.2a2 2 0 0 0 2-1.6L20 8H6",
+};
+
+const Thumbnail = ({ thumbnail, title }) => {
+  if (!thumbnail) return null;
+
+  if (thumbnail.type === "image") {
+    return (
+      <img
+        src={IMAGES[thumbnail.key]}
+        alt={title}
+        className="w-full h-40 object-cover rounded-xl mb-4"
+      />
+    );
+  }
+
+  return (
+    <div
+      className="w-full h-40 rounded-xl mb-4 flex items-center justify-center"
+      style={{ background: `${thumbnail.color}1a` }}
+    >
+      <svg
+        width="40"
+        height="40"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke={thumbnail.color}
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d={ICON_PATHS[thumbnail.icon] || ICON_PATHS.api} />
+      </svg>
+    </div>
+  );
+};
+
 export const Project = () => {
   return (
     <LoadingOnScreen>
@@ -24,6 +75,8 @@ export const Project = () => {
                   i === 0 ? "md:col-span-2" : ""
                 }`}
               >
+                <Thumbnail thumbnail={project.thumbnail} title={project.title} />
+
                 <h3 className="text-lg font-bold text-[#12151f] mb-2 font-display">
                   {project.title}
                 </h3>

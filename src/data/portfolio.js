@@ -49,7 +49,7 @@ export const skills = [
   },
   {
     category: "Frontend",
-    items: ["HTML5", "CSS3", "ReactJS", "JavaScript (ES6+)", "TypeScript","Custom Hooks"],
+    items: ["HTML5", "CSS3", "ReactJS", "JavaScript (ES6+)", "TypeScript", "Custom Hooks"],
   },
   {
     category: "Backend",
@@ -106,22 +106,36 @@ export const experience = [
     ],
   },
 ];
-
 export const projects = [
-
-   {
+  {
     title: "Food Delivery Application",
     description:
       "A complete full-stack food delivery application built with ReactJS and Java Spring Boot, covering the entire flow from browsing to order placement.",
     points: [
       "▸ Built the ReactJS frontend with authentication, restaurant/food browsing, cart management, and order placement.",
       "Developed the Java Spring Boot backend with REST APIs connecting the frontend to a PostgreSQL database.",
-      "Implemented CRUD operations and structured data handling for restaurants, orders, and user accounts."
+      "Implemented CRUD operations and structured data handling for restaurants, orders, and user accounts.",
     ],
-    tech: ["ReactJS", "Java", "Spring Boot", "PostgreSQL", "JWT" , "Hibernate"],
+    tech: ["ReactJS", "Java", "Spring Boot", "PostgreSQL", "JWT", "Hibernate"],
     github: null,
     demo: null,
-    
+    status: null,
+    thumbnail: { type: "image", key: "food-delivery" },
+  },
+  {
+    title: "Jarvis AI Chatbot",
+    description:
+      "A simple AI chatbot built with HTML, CSS, and JavaScript that integrates the Google Gemini API to provide interactive AI-powered conversations.",
+    points: [
+      "▸ Built a responsive chatbot interface using HTML and CSS with a clean and interactive user experience.",
+      "Integrated the Google Gemini API using JavaScript and Fetch API to send user messages and display AI-generated responses.",
+      "Implemented chat history using LocalStorage along with typing indicators, new chat functionality, and basic error handling.",
+    ],
+    tech: ["HTML5", "CSS3", "JavaScript", "Gemini API", "LocalStorage"],
+    github: "https://github.com/Dhilakesh2006/Jarvis-ai-chatbot-app",
+    demo: "https://dhilakesh2006.github.io/Jarvis-ai-chatbot-app/",
+    status: null,
+    thumbnail: { type: "image", key: "jarvis-chatbot" },
   },
   {
     title: "Product Management REST API",
@@ -136,8 +150,8 @@ export const projects = [
     github: "https://github.com/Dhilakesh2006/Dhilakesh-Springboot-project",
     demo: null,
     status: null,
+    thumbnail: { type: "image", key: "product-api" },
   },
- 
   {
     title: "E-Commerce Web Application",
     description:
@@ -150,8 +164,10 @@ export const projects = [
     github: null,
     demo: null,
     status: null,
+    thumbnail: { type: "icon", icon: "cart", color: "#10b981" },
   },
 ];
+
 
 export const achievements = [
   {
